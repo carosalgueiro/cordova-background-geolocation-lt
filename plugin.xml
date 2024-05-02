@@ -5,6 +5,15 @@
     id="cordova-background-geolocation-lt"
     version="4.16.3">
 
+    <preference name="APP_ID" default="[CHANGEME] YOUR_APP_ID_HERE" />
+    <widget
+      id="$APP_ID"
+      version="1.0.0"
+      xmlns="http://www.w3.org/ns/widgets"
+      xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:cdv="http://cordova.apache.org/ns/1.0">        
+    </widget>
+
     <name>BackgroundGeolocation</name>
     <description>The most sophisticated, battery-efficient background-geolocation and geofencing plugin for Cordova</description>
     <license>MIT</license>
@@ -91,6 +100,14 @@
             </feature>
         </config-file>
      </platform>
+
+    <!-- Cordova Background Geolocation License -->
+        <preference name="YOUR_LICENSE_KEY_HERE" default="[CHANGEME] YOUR_LICENSE_KEY_HERE" />
+        <config-file parent="/manifest/application" target="app/src/main/AndroidManifest.xml">
+          <meta-data
+            android:name="com.transistorsoft.locationmanager.license"
+            android:value="$YOUR_LICENSE_KEY_HERE" />
+        </config-file>
 
      <!-- Browser (mock) -->
      <platform name="browser">
